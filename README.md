@@ -1,0 +1,4 @@
+Fig
+===
+
+Dead-simple configurations
