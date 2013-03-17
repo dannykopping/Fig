@@ -1,0 +1,17 @@
+{
+	"name": "dannykopping/Fig",
+	"description": "Dead-simple configurations",
+	"keywords": ["config", "simple", "Fig"],
+	"minimum-stability": "dev",
+	"authors": [
+		{
+			"name": "Danny Kopping",
+			"email": "dannykopping@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-0": {
+			"Fig": "."
+		}
+	}
+}
