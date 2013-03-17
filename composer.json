@@ -1,7 +1,7 @@
 {
-	"name": "dannykopping/Fig",
+	"name": "dannykopping/fig",
 	"description": "Dead-simple configurations",
-	"keywords": ["config", "simple", "Fig"],
+	"keywords": ["config", "configuration", "simple", "fig"],
 	"minimum-stability": "dev",
 	"authors": [
 		{
