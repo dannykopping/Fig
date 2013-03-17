@@ -11,10 +11,14 @@ class Fig
     /**
      * Initialize the configuration options
      *
-     * @param $values
+     * @param array $values
+     * @throws \Exception
      */
-    public static function setUp($values)
+    public static function setUp(array $values)
     {
+        if(!is_array($values))
+            throw new \Exception("Only arrays can be used in Fig");
+
         self::$values = $values;
     }
 

@@ -27,6 +27,17 @@ class FigTest extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test the use of an invalid object when setting up Fig
+     *
+     * @expectedException   \Exception
+     */
+    public function testInvalidSetUp()
+    {
+        // only arrays can be passed into "setUp" function
+        Fig::setUp("hello");
+    }
+
+    /**
      * Test that the Fig class exists before attempting to try anything else
      */
     public function testClassExists()
@@ -56,6 +67,23 @@ class FigTest extends PHPUnit_Framework_TestCase
     public function testGetComplex()
     {
         $this->assertEquals(array("Rodney", "Margi"), Fig::get("family.parents"));
+    }
+
+    /**
+     * Test getting a configuration option with dot-notation
+     */
+    public function testGetEmptyString()
+    {
+        $this->assertNull(Fig::get(""));
+    }
+
+    /**
+     * Test getting a configuration option with dot-notation
+     */
+    public function testGetInvalidNotation()
+    {
+        // notice the two dots, instead of one
+        $this->assertNull(Fig::get("family..parents"));
     }
 
     /**
